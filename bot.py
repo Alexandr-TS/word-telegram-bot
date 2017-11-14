@@ -23,14 +23,14 @@ def start(m):
 @bot.message_handler(func=lambda message: message.text == u'Одно слово')
 def word_but(m):
     if (m.text == 'Одно слово'):
-        number = random.randint(0, len(words) - 1)
+        number = random.randint(0, 1)#len(words) - 1)
         bot.send_message(m.chat.id, words[number])
         
 @bot.message_handler(func=lambda message: message.text == u'Много слов')
 def many_word_but(m):
     if (m.text == 'Много слов'):
         for i in range(10):
-            number = random.randint(0, len(words) - 1)
+            number = random.randint(0, 1)#len(words) - 1)
             bot.send_message(m.chat.id, words[number])
     
 
